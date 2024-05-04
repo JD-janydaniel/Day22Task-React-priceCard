@@ -7,31 +7,31 @@ const Card = ({ data }) => {
   return (
     <>
       <div className="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-md-3 g-4">
         {data.map((data, index) => {
           return (
             <>
               <div key={index}>
-                <div class="col">
-                  <div class="card rounded-4 h-100">
+                <div className="col">
+                  <div className="card rounded-4 h-100">
                     <div className="text-center pt-4">
-                    <div class="card-subtitle  fs-5 fw-medium" style={{color:"lightgray"}}>{data.planName}</div>
-                    <div class="card-title fw-bold fs-1">${data.price}/month</div>
+                    <div className="card-subtitle  fs-5 fw-medium" style={{color:"lightgray"}}>{data.planName}</div>
+                    <div className="card-title fw-bold fs-1">${data.price}/month</div>
                     </div>
                     <hr></hr>
-                   <div class="card-body">
-                   <ul class="list-unstyled ">
+                   <div className="card-body">
+                   <ul className="list-unstyled ">
                    {data.features.map((feature,index)=>{
                         return(
                             <>
-                            <li key={index} class="p-2">
+                            <li key={index} className="p-2">
                                 {feature.enabled ? (
-                                    <span class="fs-5 fw-medium">
+                                    <span className="fs-5 fw-medium">
                                         <FaCheck size={13} /> {feature.name}
                                     </span>
                                 ) : (
                                     <>
-                                    <span class="fs-5  fw-mediun" style={{color:"lightgray"}}>
+                                    <span className="fs-5  fw-mediun" style={{color:"lightgray"}}>
                                     
                                     <ImCross size={13}/> {feature.name}
                                     </span>
@@ -44,7 +44,7 @@ const Card = ({ data }) => {
                    </ul>
                     <button
                       type="button"
-                      class="w-100  btn rounded-5 btn-lg btn-primary"
+                      className="w-100  btn rounded-5 btn-lg btn-primary"
                     >BUTTON</button>
                    </div>
                   </div>
